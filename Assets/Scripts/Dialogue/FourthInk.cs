@@ -24,40 +24,12 @@ public class FourthInk : MonoBehaviour
         story = new Story(inkJSONAsset.text);
 
         //start the refresh cycle
-        refresh();
+       // refresh();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            refresh();
-        }
-        */
-
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           Debug.Log(getNextStoryBlock());
-
-
-        foreach (Choice choice in story.currentChoices)
-        {
-            Debug.Log("The index is " + choice.index + " and its text is '" + choice.text + "'");
-        }
-
-            if (story.currentChoices.Count > 0)
-            {
-                story.ChooseChoiceIndex(0);
-            }
-
-          // Debug.Log(getNextStoryBlock());
-
-
-        }
-        */
 
     }
 
@@ -85,58 +57,15 @@ public class FourthInk : MonoBehaviour
 
             Text storyText = Instantiate(textPrefab) as Text;
 
+            //load next block and save text (if any)
             string text = getNextStoryBlock();
 
             storyText.text = text;
             storyText.transform.SetParent(panel.transform, true);
             storyText.transform.SetAsFirstSibling();
 
-
-
-            //create a new GameObject
-            //  GameObject newGameObject = new GameObject("TextChunk");
-
-            //set it's transform to the canvas (this)
-            //  newGameObject.transform.SetParent(this.transform, false);
-
-
-            //add a new text component to the new GameObject
-            // Text newTextObject = newGameObject.AddComponent<Text>();
-
-            //set the fontsize larger
-            //  newTextObject.fontSize = 60;
-
-            //access the global variable and change its value
-            // story.EvaluateFunction("changeName", "Alva");
-
-
-            /*
-            //set the text from new story block
-            newTextObject.text = getNextStoryBlock();
-            */
-
-            // Load the next block and save text (if any)
-            //  string text = getNextStoryBlock();
-
             // Get the current tags (if any)
             List<string> tags = story.currentTags;
-
-            // If there are tags, use the first one.
-            // Otherwise, just show the text.
-            /*
-            if (tags.Count > 0)
-            {
-                newTextObject.text = "<color=grey>" + tags[0] + "</color> – " + text;
-            }
-            else
-            {
-                newTextObject.text = text;
-            }
-
-            //load arial from the built in resources
-            newTextObject.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
-            */
-
 
             foreach (Choice choice in story.currentChoices)
             {
@@ -152,26 +81,24 @@ public class FourthInk : MonoBehaviour
                 {
                     OnClickChoiceButton(choice);
                 });
-
             }
         }
 
 
         if (story.canContinue == false)
         {
-            panel.SetActive(false);
+            //panel.SetActive(false);
+            Debug.Log("storyCantContinue");
+
             // refreshStory();
-            Debug.Log("donesi");
-            // panel.SetActive(false);
             //  getNextStoryBlock();
         }
 
 
-
         if (panel.activeInHierarchy == false)
         {
-            refreshStory();
-            Debug.Log("refreshedStory");
+          //  refreshStory();
+            Debug.Log("paneInactive");
         }
 
 
@@ -190,7 +117,6 @@ public class FourthInk : MonoBehaviour
     {
         int childCount = panel.transform.childCount;
 
-
         for (int i = childCount - 1; i >= 0; --i)
         {
             GameObject.Destroy(panel.transform.GetChild(i).gameObject);
@@ -200,8 +126,6 @@ public class FourthInk : MonoBehaviour
     //load and potentially return the next story block
     string getNextStoryBlock()
     {
-
-        
         string text = "";
 
         if (story.canContinue)
@@ -216,18 +140,12 @@ public class FourthInk : MonoBehaviour
             //refreshStory();
         }
         return text;
-        
-
-  
     }
 
     public void refreshStory()
     {
         story = new Story(inkJSONAsset.text);
     }
-
-
-   
 
     //***tag parser***///
     //in inky you can use tags which can be used to cue stuff in a game
