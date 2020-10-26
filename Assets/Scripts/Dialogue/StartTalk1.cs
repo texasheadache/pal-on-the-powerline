@@ -7,8 +7,8 @@ public class StartTalk1 : MonoBehaviour
 {
 
     public GameObject panel;
-    public ThirdInk thirdInk;
-   // public SecondInk secondInk;
+   // public ThirdInk thirdInk;
+    public FourthInk fourthInk;
     public bool playerInRange;
     
 
@@ -24,8 +24,8 @@ public class StartTalk1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
             panel.SetActive(true);
-            thirdInk.refresh();
-           // secondInk.refresh();
+            // thirdInk.refresh();
+            fourthInk.refresh();
         }
     }
 
