@@ -7,8 +7,10 @@ public class StartTalk1 : MonoBehaviour
 {
 
     public GameObject panel;
-    public SecondInk secondInk;
+    public ThirdInk thirdInk;
+   // public SecondInk secondInk;
     public bool playerInRange;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,8 @@ public class StartTalk1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
             panel.SetActive(true);
-            secondInk.refresh();
+            thirdInk.refresh();
+           // secondInk.refresh();
         }
     }
 

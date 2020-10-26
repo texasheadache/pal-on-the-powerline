@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 
-public class SecondInk : MonoBehaviour
+public class ThirdInk : MonoBehaviour
 {
 
     public TextAsset inkJSONAsset;
     private Story story;
     public Button buttonPrefab;
     public GameObject panel;
-    public Text textPrefab; 
+    public Text textPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class SecondInk : MonoBehaviour
         story = new Story(inkJSONAsset.text);
 
         //start the refresh cycle
-       refresh();
+        refresh();
     }
 
     // Update is called once per frame
@@ -72,28 +72,33 @@ public class SecondInk : MonoBehaviour
         {
             clearUI();
         }
-        
+
 
         if (story.canContinue == true)
         {
 
-          
+            Text storyText = Instantiate(textPrefab) as Text;
 
+            string text = getNextStoryBlock();
+
+            storyText.text = text;
+            storyText.transform.SetParent(this.transform, true);
+            storyText.transform.SetAsFirstSibling();
 
 
 
             //create a new GameObject
-            GameObject newGameObject = new GameObject("TextChunk");
+          //  GameObject newGameObject = new GameObject("TextChunk");
 
             //set it's transform to the canvas (this)
-            newGameObject.transform.SetParent(this.transform, false);
+          //  newGameObject.transform.SetParent(this.transform, false);
 
 
             //add a new text component to the new GameObject
-            Text newTextObject = newGameObject.AddComponent<Text>();
+           // Text newTextObject = newGameObject.AddComponent<Text>();
 
             //set the fontsize larger
-            newTextObject.fontSize = 60;
+          //  newTextObject.fontSize = 60;
 
             //access the global variable and change its value
             // story.EvaluateFunction("changeName", "Alva");
@@ -105,13 +110,14 @@ public class SecondInk : MonoBehaviour
             */
 
             // Load the next block and save text (if any)
-            string text = getNextStoryBlock();
+          //  string text = getNextStoryBlock();
 
             // Get the current tags (if any)
             List<string> tags = story.currentTags;
 
             // If there are tags, use the first one.
             // Otherwise, just show the text.
+            /*
             if (tags.Count > 0)
             {
                 newTextObject.text = "<color=grey>" + tags[0] + "</color> – " + text;
@@ -123,6 +129,7 @@ public class SecondInk : MonoBehaviour
 
             //load arial from the built in resources
             newTextObject.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
+            */
 
 
             foreach (Choice choice in story.currentChoices)
@@ -143,25 +150,25 @@ public class SecondInk : MonoBehaviour
             }
         }
 
-        
+
         if (story.canContinue == false)
         {
-             panel.SetActive(false);
+            panel.SetActive(false);
             // refreshStory();
-             Debug.Log("donesi");
-           // panel.SetActive(false);
-          //  getNextStoryBlock();
+            Debug.Log("donesi");
+            // panel.SetActive(false);
+            //  getNextStoryBlock();
         }
 
-        
-        
+
+
         if (panel.activeInHierarchy == false)
         {
             refreshStory();
             Debug.Log("refreshedStory");
         }
-        
-        
+
+
     }
 
     //when we click the choice button, tell the story to choose that choice
@@ -196,7 +203,7 @@ public class SecondInk : MonoBehaviour
         }
         else
         {
-          //  panel.SetActive(false);
+            //  panel.SetActive(false);
             Debug.Log("done");
             //refreshStory();
         }
@@ -209,6 +216,3 @@ public class SecondInk : MonoBehaviour
     }
 
 }
-
-
-
