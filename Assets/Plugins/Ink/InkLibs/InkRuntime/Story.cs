@@ -2555,6 +2555,7 @@ namespace Ink.Runtime
         bool _asyncSaving;
 
         Profiler _profiler;
-	}
+        public Action<object, object> onError;
+    }
 }
 

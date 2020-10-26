@@ -12,6 +12,7 @@ public class ThirdInk : MonoBehaviour
     public Button buttonPrefab;
     public GameObject panel;
     public Text textPrefab;
+   // public GameObject firstPanel;  
 
     // Start is called before the first frame update
     void Start()
