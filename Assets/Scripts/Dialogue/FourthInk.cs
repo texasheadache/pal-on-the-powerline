@@ -8,7 +8,7 @@ public class FourthInk : MonoBehaviour
 {
 
     public TextAsset inkJSONAsset;
-    private Story story;
+    public Story story;
     public Button buttonPrefab;
     public GameObject panel;
     public Text textPrefab;
@@ -79,7 +79,7 @@ public class FourthInk : MonoBehaviour
                 //set listener
                 choiceButton.onClick.AddListener(delegate
                 {
-                    OnClickChoiceButton(choice);
+                    onClickChoiceButton(choice);
                 });
             }
         }
@@ -100,12 +100,12 @@ public class FourthInk : MonoBehaviour
           //  refreshStory();
             Debug.Log("paneInactive");
         }
-
-
     }
 
+
+
     //when we click the choice button, tell the story to choose that choice
-    void OnClickChoiceButton(Choice choice)
+    void onClickChoiceButton(Choice choice)
     {
         story.ChooseChoiceIndex(choice.index);
         refresh();
@@ -122,6 +122,7 @@ public class FourthInk : MonoBehaviour
             GameObject.Destroy(panel.transform.GetChild(i).gameObject);
         }
     }
+
 
     //load and potentially return the next story block
     string getNextStoryBlock()
@@ -142,17 +143,19 @@ public class FourthInk : MonoBehaviour
         return text;
     }
 
-    public void refreshStory()
-    {
-        story = new Story(inkJSONAsset.text);
-    }
 
     //***tag parser***///
     //in inky you can use tags which can be used to cue stuff in a game
     // this is just one way of doing it. not the only method to trigger events. 
-    void ParseTags()
+    void parseTags()
     {
         tags = story.currentTags;
+    }
+
+    public void firstCall()
+    {
+        story.ChoosePathString("test2");
+        Debug.Log("testing2");       
     }
 
 }

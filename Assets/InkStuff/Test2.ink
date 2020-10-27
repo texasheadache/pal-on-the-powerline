@@ -30,19 +30,23 @@ So yeah - I think i'll try to, really reach him -
 just to see what's up. 
 I know - I'm really putting myself out there. 
 In a, 
-weird kind of way. 
-
-
+weird kind of way. #monologueDone
 -->DONE
 
---> test2
 
 
 === test2 ===
-
 Hello?
-Hello?
-lk
+Helloooo?
+Hello? Hey. Can you hear me? 
+Yeah. Who is this? 
+Well, um...
+Okay - I'm your phone. 
+Wait - what? 
+I know, I know - you probably wouldn't believe me. 
+To you I must be some kind of 
+disembodied voice or something. 
+It's all pretty confusing to be honest. I - 
 -->DONE
 
 
