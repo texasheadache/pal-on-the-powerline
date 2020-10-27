@@ -17,9 +17,9 @@ public class FifthInk : MonoBehaviour
     public List<string> tags;
 
 
-
     //scripts called and related to this one within here and otherwise
     public FirstConvoTest firstConvoTest;
+    public PostConvoOne postConvoOne;
 
 
     // Start is called before the first frame update
@@ -167,6 +167,23 @@ public class FifthInk : MonoBehaviour
         {
             firstConvoTest.tagStart();
         }
+
+
+        if (tags.Contains("endConvoOne"))
+        {
+          //  firstConvoTest.afterCallMove();
+            // PostConvoOne();
+            postConvoOne.postConvoOneStart();
+        }
+
+        if (tags.Contains("a"))
+        {
+            postConvoOne.postConvoOneMove();
+          //  firstConvoTest.afterCallMove();
+
+            Debug.Log("callfromFifth");
+        }
+
     }
 
 
@@ -174,6 +191,13 @@ public class FifthInk : MonoBehaviour
     {
         story.ChoosePathString("ConvoOne");
         Debug.Log("testing2");
+    }
+
+    public void PostConvoOne()
+    {
+        story.ChoosePathString("PostConvoOne");
+        Debug.Log("postConvoOneStarting");
+        //postConvoOne.postConvoOneStart();
     }
 
 }

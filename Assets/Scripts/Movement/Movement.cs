@@ -40,4 +40,14 @@ public class Movement : MonoBehaviour
             MoveCharacter();
         }
     }
+
+    public void freeze()
+    {
+        speed = 0; 
+    }
+
+    public void unFreeze()
+    {
+        speed = 2.5f; 
+    }
 }

@@ -14,6 +14,9 @@ public class FirstConvoTest : MonoBehaviour
     public Story story;
     public List<string> tags;
     public bool tagAndGo = false;
+    public Movement movement; 
+
+    public AudioSource ringOneSound; 
 
 
 
@@ -46,6 +49,8 @@ public class FirstConvoTest : MonoBehaviour
                 fifthInk.firstCall();
                // fifthInk.refresh();
                 once = true;
+                movement.freeze();
+                ringOneSound.Stop();
             }
 
             //  fourthInk.refresh();
@@ -55,8 +60,24 @@ public class FirstConvoTest : MonoBehaviour
 
     public void tagStart()
     {
-        tagAndGo = true;
+      //  tagAndGo = true;
         Debug.Log("tagandgobaby");
+        StartCoroutine(ringOne());
+    }
+
+
+    IEnumerator ringOne()
+    {
+        yield return new WaitForSeconds(10);
+        Debug.Log("lkj");
+        tagAndGo = true;
+        ringOneSound.Play();
+
+    }
+
+    public void afterCallMove()
+    {
+        movement.unFreeze();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
