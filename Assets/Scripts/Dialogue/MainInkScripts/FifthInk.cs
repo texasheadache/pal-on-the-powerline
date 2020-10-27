@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 
-public class FourthInk : MonoBehaviour
+public class FifthInk : MonoBehaviour
 {
 
     public TextAsset inkJSONAsset;
@@ -19,7 +19,7 @@ public class FourthInk : MonoBehaviour
 
 
     //scripts called and related to this one within here and otherwise
-    public StartTalk1 startTalk1;
+    public FirstConvoTest firstConvoTest;
 
 
     // Start is called before the first frame update
@@ -49,7 +49,7 @@ public class FourthInk : MonoBehaviour
     {
 
         //clear the ui
-        
+
         if (story.currentChoices.Count < 1)
         {
             clearUI();
@@ -96,7 +96,7 @@ public class FourthInk : MonoBehaviour
         {
             //panel.SetActive(false);
             Debug.Log("storyCantContinue");
-          //  clearUI();
+            //  clearUI();
             // refreshStory();
             //  getNextStoryBlock();
         }
@@ -104,7 +104,7 @@ public class FourthInk : MonoBehaviour
 
         if (panel.activeInHierarchy == false)
         {
-          //  refreshStory();
+            //  refreshStory();
             Debug.Log("paneInactive");
         }
     }
@@ -120,7 +120,7 @@ public class FourthInk : MonoBehaviour
 
 
     //clear out all of the UI, calling Destroy() in reverse
-   public void clearUI()
+    public void clearUI()
     {
         int childCount = panel.transform.childCount;
 
@@ -157,23 +157,23 @@ public class FourthInk : MonoBehaviour
     public void parseTags()
     {
         tags = story.currentTags;
-        if(tags.Count != 0)
-         {
+        if (tags.Count != 0)
+        {
             Debug.Log(tags[0]);
-         }
+        }
 
 
         if (tags.Contains("endFirstMonologue"))
         {
-            startTalk1.tagStart();
+            firstConvoTest.tagStart();
         }
     }
 
-  
+
     public void firstCall()
     {
-        story.ChoosePathString("test2");
-        Debug.Log("testing2");       
+        story.ChoosePathString("ConvoOne");
+        Debug.Log("testing2");
     }
 
 }
