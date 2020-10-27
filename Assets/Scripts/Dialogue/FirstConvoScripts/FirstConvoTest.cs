@@ -44,7 +44,7 @@ public class FirstConvoTest : MonoBehaviour
             if (!once && tagAndGo == true)
             {
                 fifthInk.firstCall();
-                fifthInk.refresh();
+               // fifthInk.refresh();
                 once = true;
             }
 

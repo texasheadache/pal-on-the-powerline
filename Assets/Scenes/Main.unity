@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c85aeb126940491cad7faeffa80b08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: d0e9e378e66894317a2c49298ce08af6, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 70f06a534758b48949f0a4aede970074, type: 3}
   buttonPrefab: {fileID: 5240962822363633833, guid: 4bda0870c19654bf284b8d76010390f9,
     type: 3}
   panel: {fileID: 1576865984}
