@@ -8,15 +8,15 @@ public class StartTalk2 : MonoBehaviour
 {
 
     public GameObject panel;
-    // public ThirdInk thirdInk;
     public FourthInk fourthInk;
     public bool playerInRange;
+    public Story story; 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        story = fourthInk.story;
     }
 
     // Update is called once per frame
@@ -24,29 +24,24 @@ public class StartTalk2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            panel.SetActive(true);
-            // thirdInk.refresh();
-            fourthInk.refresh();
-        }
-    }
+            if (panel.activeInHierarchy == false)
+            {
+                panel.SetActive(true);
+            }
 
-    /*
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playerInRange = true;
-            Debug.Log("inRange");
-        }
-    }
+           // fourthInk.refresh();
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playerInRange = false;
-            Debug.Log("notInRange");
+
+            
+            if (fourthInk.story.canContinue == true)
+            {
+                fourthInk.refresh();
+            }
+            else if(fourthInk.story.canContinue == false)
+            {
+                fourthInk.clearUI();
+            }
+            
         }
     }
-    */
 }

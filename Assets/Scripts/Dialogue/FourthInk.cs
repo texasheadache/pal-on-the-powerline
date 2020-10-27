@@ -14,8 +14,13 @@ public class FourthInk : MonoBehaviour
     public Text textPrefab;
     private Text storyText;
     // public GameObject firstPanel;
+    public List<string> tags;
 
-    List<string> tags;
+
+
+    //scripts called and related to this one within here and otherwise
+    public StartTalk1 startTalk1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +29,8 @@ public class FourthInk : MonoBehaviour
         story = new Story(inkJSONAsset.text);
 
         //start the refresh cycle
-       // refresh();
+        // refresh();
+
     }
 
     // Update is called once per frame
@@ -65,7 +71,8 @@ public class FourthInk : MonoBehaviour
             storyText.transform.SetAsFirstSibling();
 
             // Get the current tags (if any)
-            List<string> tags = story.currentTags;
+            // List<string> tags = story.currentTags;
+            parseTags();
 
             foreach (Choice choice in story.currentChoices)
             {
@@ -89,7 +96,7 @@ public class FourthInk : MonoBehaviour
         {
             //panel.SetActive(false);
             Debug.Log("storyCantContinue");
-
+          //  clearUI();
             // refreshStory();
             //  getNextStoryBlock();
         }
@@ -113,7 +120,7 @@ public class FourthInk : MonoBehaviour
 
 
     //clear out all of the UI, calling Destroy() in reverse
-    void clearUI()
+   public void clearUI()
     {
         int childCount = panel.transform.childCount;
 
@@ -147,11 +154,22 @@ public class FourthInk : MonoBehaviour
     //***tag parser***///
     //in inky you can use tags which can be used to cue stuff in a game
     // this is just one way of doing it. not the only method to trigger events. 
-    void parseTags()
+    public void parseTags()
     {
         tags = story.currentTags;
+        if(tags.Count != 0)
+         {
+            Debug.Log(tags[0]);
+         }
+
+
+        if (tags.Contains("endFirstMonologue"))
+        {
+            startTalk1.tagStart();
+        }
     }
 
+  
     public void firstCall()
     {
         story.ChoosePathString("test2");

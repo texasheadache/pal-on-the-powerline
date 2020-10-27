@@ -11,14 +11,18 @@ public class StartTalk1 : MonoBehaviour
     public FourthInk fourthInk;
     public bool playerInRange;
     bool once = false;
-    public Story story; 
+    public Story story;
+    public List<string> tags;
+    public bool tagAndGo = false; 
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         story = fourthInk.story;
+        tags = fourthInk.tags;
+
     }
 
     // Update is called once per frame
@@ -37,15 +41,23 @@ public class StartTalk1 : MonoBehaviour
                 panel.SetActive(true);
             }
 
-            if (!once && story.canContinue == false)
+            if (!once && tagAndGo == true)
             {
                 fourthInk.firstCall();
                 fourthInk.refresh();
                 once = true;
             }
+
+          //  fourthInk.refresh();
         }
     }
 
+
+    public void tagStart()
+    {
+            tagAndGo = true;
+            Debug.Log("tagandgobaby");
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
