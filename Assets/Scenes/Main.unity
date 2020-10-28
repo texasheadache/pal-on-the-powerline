@@ -492,9 +492,9 @@ GameObject:
   - component: {fileID: 1099374802}
   - component: {fileID: 1099374804}
   - component: {fileID: 1099374805}
-  - component: {fileID: 1099374806}
   - component: {fileID: 1099374807}
   - component: {fileID: 1099374808}
+  - component: {fileID: 1099374809}
   m_Layer: 0
   m_Name: phonetable1
   m_TagString: Untagged
@@ -606,24 +606,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1099374802}
   pivot: {fileID: 197422071}
---- !u!114 &1099374806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099374801}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac7b04ce897074f69a55dcab30044f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1576865984}
-  fourthInk: {fileID: 1487534764}
-  playerInRange: 0
-  tags:
-  - 
-  tagAndGo: 0
 --- !u!61 &1099374807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -669,6 +651,24 @@ MonoBehaviour:
   tagAndGo: 0
   movement: {fileID: 1948399155}
   ringOneSound: {fileID: 2064174475}
+--- !u!114 &1099374809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099374801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fb70f8607bc49d1b3b0dc9c84397db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1576865984}
+  fifthInk: {fileID: 1487534766}
+  playerInRange: 0
+  tags: []
+  movement: {fileID: 1948399155}
+  ringTwoSound: {fileID: 2064174475}
 --- !u!1 &1460176172
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +818,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1487534765}
-  - component: {fileID: 1487534764}
   - component: {fileID: 1487534766}
   m_Layer: 0
   m_Name: DialogueManager
@@ -827,26 +826,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1487534764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487534763}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 587c215c2c30e4481a806c220b9a72bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: d0e9e378e66894317a2c49298ce08af6, type: 3}
-  buttonPrefab: {fileID: 5240962822363633833, guid: 4bda0870c19654bf284b8d76010390f9,
-    type: 3}
-  panel: {fileID: 1576865984}
-  textPrefab: {fileID: 6159298891262071556, guid: f605248110642466789ddd27c4247db0,
-    type: 3}
-  tags: []
-  startTalk1: {fileID: 1099374806}
 --- !u!4 &1487534765
 Transform:
   m_ObjectHideFlags: 0
@@ -882,6 +861,7 @@ MonoBehaviour:
   tags: []
   firstConvoTest: {fileID: 1099374808}
   postConvoOne: {fileID: 1985724292}
+  secondConvo: {fileID: 1099374809}
 --- !u!1 &1576865984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1378,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1985724289}
-  - component: {fileID: 1985724290}
   - component: {fileID: 1985724291}
   - component: {fileID: 1985724292}
   m_Layer: 0
@@ -1422,21 +1401,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1985724290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985724288}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5bc8dbc68434465b126c756f227e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1576865984}
-  fourthInk: {fileID: 1487534764}
-  playerInRange: 0
 --- !u!114 &1985724291
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class PostConvoOne : MonoBehaviour
             if (!once && postConvoOneStarting == true)
             {
                 fifthInk.PostConvoOne();
+                fifthInk.refresh();
                 once = true;
 
             }
