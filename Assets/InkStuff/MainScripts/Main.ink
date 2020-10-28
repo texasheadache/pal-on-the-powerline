@@ -3,6 +3,10 @@ INCLUDE IntroMonologue
 INCLUDE new
 INCLUDE PostConvoOne
 INCLUDE SecondConvo
+INCLUDE PostConvoTwo
+INCLUDE PostConvoTwoTwo
+
+
 
 
 
@@ -19,6 +23,10 @@ INCLUDE SecondConvo
 ->PostConvoOne
 
 ->SecondConvo
+
+->PostConvoTwo
+
+->PostConvoTwoTwo
 
 ->END
 

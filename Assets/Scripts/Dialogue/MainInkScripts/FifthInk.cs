@@ -21,6 +21,7 @@ public class FifthInk : MonoBehaviour
     public FirstConvoTest firstConvoTest;
     public PostConvoOne postConvoOne;
     public SecondConvo secondConvo;
+    public PostConvoTwo postConvoTwo;
 
 
     // Start is called before the first frame update
@@ -163,18 +164,15 @@ public class FifthInk : MonoBehaviour
             Debug.Log(tags[0]);
         }
 
-
         if (tags.Contains("endFirstMonologue"))
         {
             firstConvoTest.tagStart();
         }
 
-
         if (tags.Contains("endConvoOne"))
         {
             postConvoOne.postConvoOneStart();
         }
-
 
         if (tags.Contains("a"))
         {
@@ -182,11 +180,23 @@ public class FifthInk : MonoBehaviour
             Debug.Log("callfromFifth");
         }
 
-
         if (tags.Contains("postOneDone"))
         {
             Debug.Log("sdfs");
             secondConvo.secondConvoStartTrigger();
+        }
+
+        if (tags.Contains("endSecondConvo"))
+        {
+            Debug.Log("endedSecondConversation");
+            postConvoTwo.postConvoTwoBegin();
+        }
+
+        if (tags.Contains("endPostConvoTwo"))
+        {
+            Debug.Log("endedFirstPartofPostTwoo");
+            postConvoTwo.postConvoTwoTwoBegin();
+
         }
 
     }
@@ -205,6 +215,5 @@ public class FifthInk : MonoBehaviour
         //postConvoOne.postConvoOneStart();
     }
 
-    
 
 }
