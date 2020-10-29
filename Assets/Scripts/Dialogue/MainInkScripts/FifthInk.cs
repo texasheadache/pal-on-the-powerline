@@ -23,7 +23,7 @@ public class FifthInk : MonoBehaviour
     public SecondConvo secondConvo;
     public PostConvoTwo postConvoTwo;
     public ThirdConvo thirdConvo;
-
+    public PostThirdConvo postThirdConvo;
 
     // Start is called before the first frame update
     void Start()
@@ -207,6 +207,18 @@ public class FifthInk : MonoBehaviour
         {
             Debug.Log("endedPostTwoTwo");
             thirdConvo.thirdConvoTrigger();
+        }
+
+        if (tags.Contains("endThirdConvo"))
+        {
+            Debug.Log("endedNumberThree");
+            postThirdConvo.postThirdConvoBegin();
+        }
+
+        if (tags.Contains("PostThirdConvoMove"))
+        {
+            Debug.Log("movinAgain");
+            postThirdConvo.movingAgain();
         }
 
     }
