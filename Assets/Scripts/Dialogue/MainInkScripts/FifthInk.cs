@@ -163,6 +163,10 @@ public class FifthInk : MonoBehaviour
         if (tags.Count != 0)
         {
             Debug.Log(tags[0]);
+            if (tags.Count > 1)
+            {
+                Debug.Log(tags[1]);
+            }
         }
 
         if (tags.Contains("endFirstMonologue"))
@@ -199,10 +203,10 @@ public class FifthInk : MonoBehaviour
             postConvoTwo.postConvoTwoTwoBegin();
         }
 
-        if (tags.Contains("endPostConvoTwoTwo"))
+        if (tags.Contains("g"))
         {
             Debug.Log("endedPostTwoTwo");
-          //  thirdConvo.thirdConvoTrigger();
+            thirdConvo.thirdConvoTrigger();
         }
 
     }

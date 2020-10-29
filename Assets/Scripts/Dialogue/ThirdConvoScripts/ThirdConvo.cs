@@ -43,6 +43,7 @@ public class ThirdConvo : MonoBehaviour
             if (!once6 && thirdConvoStarts == true)
             {
                 Debug.Log("thirdconversationing");
+                thirdCall();
                 once6 = true;
                 movement.freeze();
                 ringing.Stop();

@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 1099374807}
   - component: {fileID: 1099374808}
   - component: {fileID: 1099374809}
+  - component: {fileID: 1099374806}
   m_Layer: 0
   m_Name: phonetable1
   m_TagString: Untagged
@@ -606,6 +607,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1099374802}
   pivot: {fileID: 197422071}
+--- !u!114 &1099374806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099374801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf216f5ec413047e4a36753d44646a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1576865984}
+  fifthInk: {fileID: 1487534766}
+  playerInRange: 0
+  tags: []
+  movement: {fileID: 1948399155}
+  ringing: {fileID: 2064174475}
 --- !u!61 &1099374807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -863,6 +882,7 @@ MonoBehaviour:
   postConvoOne: {fileID: 1985724292}
   secondConvo: {fileID: 1099374809}
   postConvoTwo: {fileID: 1985724290}
+  thirdConvo: {fileID: 1099374806}
 --- !u!1 &1576865984
 GameObject:
   m_ObjectHideFlags: 0
