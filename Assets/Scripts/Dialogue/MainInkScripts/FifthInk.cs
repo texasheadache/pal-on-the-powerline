@@ -180,16 +180,14 @@ public class FifthInk : MonoBehaviour
             // textPrefab.GetComponent<Text>().rectTransform.position = new Vector3(200, 200, transform.position.z);
             panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
             panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
-
         }
 
         if (tags.Contains("phone"))
         {
             Debug.Log("phoneChangeColors!");
-            textPrefab.GetComponent<Text>().material.color = Color.red;
             panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
             panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
-
+            textPrefab.GetComponent<Text>().material.color = new Color32(243, 134, 134, 255);
         }
 
         if (tags.Contains("endFirstMonologue"))
