@@ -154,6 +154,9 @@ public class FifthInk : MonoBehaviour
     }
 
 
+
+
+
     //***tag parser***///
     //in inky you can use tags which can be used to cue stuff in a game
     // this is just one way of doing it. not the only method to trigger events. 
@@ -167,6 +170,18 @@ public class FifthInk : MonoBehaviour
             {
                 Debug.Log(tags[1]);
             }
+        }
+
+        if (tags.Contains("molly"))
+        {
+           Debug.Log("mollyChangeColors!");
+           textPrefab.GetComponent<Text>().material.color = Color.black;
+        }
+
+        if (tags.Contains("phone"))
+        {
+            Debug.Log("phoneChangeColors!");
+            textPrefab.GetComponent<Text>().material.color = Color.red;
         }
 
         if (tags.Contains("endFirstMonologue"))

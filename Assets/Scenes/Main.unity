@@ -700,8 +700,6 @@ GameObject:
   - component: {fileID: 1460176177}
   - component: {fileID: 1460176176}
   - component: {fileID: 1460176175}
-  - component: {fileID: 1460176174}
-  - component: {fileID: 1460176173}
   m_Layer: 5
   m_Name: FirstCanvas
   m_TagString: Untagged
@@ -709,45 +707,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1460176173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460176172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 30
-    m_Right: 30
-    m_Top: 30
-    m_Bottom: 30
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
---- !u!114 &1460176174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460176172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9990c64f1ec24fb69b718a6ca85bcc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: 105d39e1dbac04eb4866b2e81862ee38, type: 3}
-  buttonPrefab: {fileID: 5240962822363633833, guid: 4bda0870c19654bf284b8d76010390f9,
-    type: 3}
-  panel: {fileID: 1576865984}
 --- !u!114 &1460176175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,12 +736,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 500
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -896,7 +855,6 @@ GameObject:
   - component: {fileID: 1576865989}
   - component: {fileID: 1576865988}
   - component: {fileID: 1576865986}
-  - component: {fileID: 1576865990}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -918,10 +876,10 @@ RectTransform:
   m_Father: {fileID: 1460176178}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1483, y: -1666}
-  m_SizeDelta: {x: 2319, y: 586}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.0087632, y: 141.42}
+  m_SizeDelta: {x: 1821.5, y: 282.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1576865986
 MonoBehaviour:
@@ -981,24 +939,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576865984}
   m_CullTransparentMesh: 0
---- !u!114 &1576865990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576865984}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea253965333df4050b85bf09fd989a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: b4a3f569470874f5b9ffbfac04aa6303, type: 3}
-  buttonPrefab: {fileID: 5240962822363633833, guid: 4bda0870c19654bf284b8d76010390f9,
-    type: 3}
-  panel: {fileID: 1576865984}
-  textPrefab: {fileID: 6159298891262071556, guid: f605248110642466789ddd27c4247db0,
-    type: 3}
 --- !u!1 &1633650177
 GameObject:
   m_ObjectHideFlags: 0
