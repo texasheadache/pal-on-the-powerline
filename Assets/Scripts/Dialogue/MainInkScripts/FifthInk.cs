@@ -15,6 +15,7 @@ public class FifthInk : MonoBehaviour
     private Text storyText;
     // public GameObject firstPanel;
     public List<string> tags;
+    public GameObject panel1; 
 
 
     //scripts called and related to this one within here and otherwise
@@ -176,12 +177,19 @@ public class FifthInk : MonoBehaviour
         {
            Debug.Log("mollyChangeColors!");
            textPrefab.GetComponent<Text>().material.color = Color.black;
+            // textPrefab.GetComponent<Text>().rectTransform.position = new Vector3(200, 200, transform.position.z);
+            panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
+            panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
+
         }
 
         if (tags.Contains("phone"))
         {
             Debug.Log("phoneChangeColors!");
             textPrefab.GetComponent<Text>().material.color = Color.red;
+            panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
+            panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
+
         }
 
         if (tags.Contains("endFirstMonologue"))
