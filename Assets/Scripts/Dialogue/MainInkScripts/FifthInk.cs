@@ -15,7 +15,8 @@ public class FifthInk : MonoBehaviour
     private Text storyText;
     // public GameObject firstPanel;
     public List<string> tags;
-    public GameObject panel1; 
+    public GameObject panel1;
+    public Text textPanel; 
 
 
     //scripts called and related to this one within here and otherwise
@@ -65,17 +66,16 @@ public class FifthInk : MonoBehaviour
 
             clearUI();
 
-            Text storyText = Instantiate(textPrefab) as Text;
+          //  Text storyText = Instantiate(textPrefab) as Text;
 
             //load next block and save text (if any)
             string text = getNextStoryBlock();
 
-            storyText.text = text;
-            storyText.transform.SetParent(panel.transform, true);
-            storyText.transform.SetAsFirstSibling();
+            textPanel.text = text;
+            //textPanel.transform.SetParent(panel.transform, true);
+           // textPanel.transform.SetAsFirstSibling();
 
-            // Get the current tags (if any)
-            // List<string> tags = story.currentTags;
+           
             parseTags();
 
             foreach (Choice choice in story.currentChoices)
@@ -126,12 +126,17 @@ public class FifthInk : MonoBehaviour
     //clear out all of the UI, calling Destroy() in reverse
     public void clearUI()
     {
+        textPanel.text = "";
+
+
+        /*
         int childCount = panel.transform.childCount;
 
         for (int i = childCount - 1; i >= 0; --i)
         {
             GameObject.Destroy(panel.transform.GetChild(i).gameObject);
         }
+        */
     }
 
 
@@ -178,15 +183,24 @@ public class FifthInk : MonoBehaviour
            Debug.Log("mollyChangeColors!");
            textPrefab.GetComponent<Text>().material.color = Color.black;
             // textPrefab.GetComponent<Text>().rectTransform.position = new Vector3(200, 200, transform.position.z);
-            panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
-            panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
+
+            //use RectTransform to move dialogue box
+
+             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400, -200f, 0f);
+
+
+           // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
+           // panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
         }
 
         if (tags.Contains("phone"))
         {
             Debug.Log("phoneChangeColors!");
-            panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
-            panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
+
+            panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(200f, 0, 0f);
+
+            // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
+            //panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
             textPrefab.GetComponent<Text>().material.color = new Color32(243, 134, 134, 255);
         }
 
