@@ -183,12 +183,7 @@ public class FifthInk : MonoBehaviour
            Debug.Log("mollyChangeColors!");
            textPrefab.GetComponent<Text>().material.color = Color.black;
             // textPrefab.GetComponent<Text>().rectTransform.position = new Vector3(200, 200, transform.position.z);
-
-            //use RectTransform to move dialogue box
-
-             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400, -200f, 0f);
-
-
+             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400f, -400f, 0f);
            // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
            // panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
         }
@@ -196,9 +191,7 @@ public class FifthInk : MonoBehaviour
         if (tags.Contains("phone"))
         {
             Debug.Log("phoneChangeColors!");
-
-            panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(200f, 0, 0f);
-
+            panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(200f, -280f, 0f);
             // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
             //panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
             textPrefab.GetComponent<Text>().material.color = new Color32(243, 134, 134, 255);
