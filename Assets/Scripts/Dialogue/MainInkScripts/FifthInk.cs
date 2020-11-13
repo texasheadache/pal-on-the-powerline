@@ -194,7 +194,7 @@ public class FifthInk : MonoBehaviour
             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(200f, -280f, 0f);
             // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
             //panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
-            textPrefab.GetComponent<Text>().material.color = new Color32(243, 134, 134, 255);
+            textPrefab.GetComponent<Text>().material.color = new Color32(123, 123, 123, 255);
         }
 
         if (tags.Contains("endFirstMonologue"))
