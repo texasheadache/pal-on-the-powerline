@@ -16,7 +16,9 @@ public class FifthInk : MonoBehaviour
     // public GameObject firstPanel;
     public List<string> tags;
     public GameObject panel1;
-    public Text textPanel; 
+    public Text textPanel;
+    public AudioSource mainMusic;
+    public AudioSource firstSong; 
 
 
     //scripts called and related to this one within here and otherwise
@@ -172,9 +174,14 @@ public class FifthInk : MonoBehaviour
         if (tags.Count != 0)
         {
             Debug.Log(tags[0]);
+
             if (tags.Count > 1)
             {
                 Debug.Log(tags[1]);
+            }
+            if(tags.Count > 2)
+            {
+                Debug.Log(tags[2]);
             }
         }
 
@@ -195,6 +202,19 @@ public class FifthInk : MonoBehaviour
             // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
             //panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
             textPrefab.GetComponent<Text>().material.color = new Color32(123, 123, 123, 255);
+        }
+
+        if (tags.Contains("firstSong"))
+        {
+            mainMusic.mute = true;
+            firstSong.mute = false;
+            Debug.Log("newSong");
+        }
+
+        if (tags.Contains("endFirstSong"))
+        {
+            mainMusic.mute = false;
+            firstSong.mute = true; 
         }
 
         if (tags.Contains("endFirstMonologue"))
