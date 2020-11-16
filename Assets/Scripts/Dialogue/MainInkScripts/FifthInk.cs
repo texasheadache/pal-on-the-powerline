@@ -214,7 +214,8 @@ public class FifthInk : MonoBehaviour
         if (tags.Contains("endFirstSong"))
         {
             mainMusic.mute = false;
-            firstSong.mute = true; 
+            firstSong.mute = true;
+            Debug.Log("changedMusicpls");
         }
 
         if (tags.Contains("endFirstMonologue"))
