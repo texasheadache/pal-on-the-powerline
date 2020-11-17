@@ -13,7 +13,8 @@ public class ObjectTalk1 : MonoBehaviour
     public Movement movement;
     public GameObject wallTalk1;
     private bool talkOn = false;
-   // private bool talkOff = false; 
+    // private bool talkOff = false;
+    public FifthInk fifthInk; 
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class ObjectTalk1 : MonoBehaviour
     {
         if (!talkOn)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && playerInRange && !talkOn)
+            if (Input.GetKeyDown(KeyCode.Space) && playerInRange && !talkOn && fifthInk.storyGoing == false)
             {
                 Debug.Log("thinkin");
                 wallTalk1.SetActive(true);
@@ -41,7 +42,13 @@ public class ObjectTalk1 : MonoBehaviour
             }
         }
 
-        else if (talkOn)
+        else if (Input.GetKeyDown(KeyCode.Space) && talkOn && wallInk1.story.canContinue)
+        {
+            Debug.Log("stillGOING");
+            selfTalking();
+        }
+
+        else if (talkOn && !wallInk1.story.canContinue)
         {
 
             if (Input.GetKeyDown(KeyCode.Space) && playerInRange && talkOn)
@@ -54,8 +61,6 @@ public class ObjectTalk1 : MonoBehaviour
             }
         }
     }
-
-   
 
     public void selfTalking()
     {

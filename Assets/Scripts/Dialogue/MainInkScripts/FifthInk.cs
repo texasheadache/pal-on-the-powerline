@@ -18,7 +18,8 @@ public class FifthInk : MonoBehaviour
     public GameObject panel1;
     public Text textPanel;
     public AudioSource mainMusic;
-    public AudioSource firstSong; 
+    public AudioSource firstSong;
+    public bool storyGoing; 
 
 
     //scripts called and related to this one within here and otherwise
@@ -67,6 +68,7 @@ public class FifthInk : MonoBehaviour
         {
 
             clearUI();
+            storyGoing = true; 
 
           //  Text storyText = Instantiate(textPrefab) as Text;
 
@@ -105,6 +107,7 @@ public class FifthInk : MonoBehaviour
             //  clearUI();
             // refreshStory();
             //  getNextStoryBlock();
+            storyGoing = false; 
         }
 
 
