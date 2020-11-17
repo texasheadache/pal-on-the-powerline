@@ -146,12 +146,11 @@ public class WallInk1 : MonoBehaviour
         if (story.canContinue)
         {
             text = story.Continue();
-            Debug.Log("loged");
+            Debug.Log("storyCont.");
         }
         else
         {
             //  panel.SetActive(false);
-            Debug.Log("done");
             //refreshStory();
         }
         return text;
