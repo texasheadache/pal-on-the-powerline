@@ -188,22 +188,19 @@ public class FifthInk : MonoBehaviour
             }
         }
 
+        
         if (tags.Contains("molly"))
         {
            Debug.Log("mollyChangeColors!");
            textPrefab.GetComponent<Text>().material.color = Color.black;
-            // textPrefab.GetComponent<Text>().rectTransform.position = new Vector3(200, 200, transform.position.z);
-             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400f, -400f, 0f);
-           // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 800;
-           // panel1.GetComponent<VerticalLayoutGroup>().padding.left = 100;
+           panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400f, -363f, 0f);
         }
 
         if (tags.Contains("phone"))
         {
             Debug.Log("phoneChangeColors!");
             panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(200f, -280f, 0f);
-            // panel1.GetComponent<VerticalLayoutGroup>().padding.top = 700;
-            //panel1.GetComponent<VerticalLayoutGroup>().padding.left = 500;
+
             textPrefab.GetComponent<Text>().material.color = new Color32(123, 123, 123, 255);
         }
 
