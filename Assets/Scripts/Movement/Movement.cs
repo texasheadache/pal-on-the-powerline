@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float speed;
     public Vector3 change;
     private Animator anim;
+    private bool isFrozen; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,11 @@ public class Movement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationAndMove();
-        if (change != Vector3.zero)
-            {
-            anim.SetFloat("movex", change.x);
-            anim.SetFloat("movey", change.y);
-             }
+        if (isFrozen == false)
+        {
+            UpdateAnimationAndMove();
+        }
+       
     }
 
 
@@ -45,16 +45,27 @@ public class Movement : MonoBehaviour
         if(change != Vector3.zero)
         {
             MoveCharacter();
+            anim.SetFloat("movex", change.x);
+            anim.SetFloat("movey", change.y);
+            anim.SetBool("moving", true);
+        }
+        else
+        {
+            anim.SetBool("moving", false);
+
         }
     }
 
     public void freeze()
     {
-        speed = 0; 
+        speed = 0;
+        isFrozen = true; 
+
     }
 
     public void unFreeze()
     {
-        speed = 2.5f; 
+        speed = 2.5f;
+        isFrozen = false; 
     }
 }
