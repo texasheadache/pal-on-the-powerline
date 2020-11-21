@@ -52,7 +52,7 @@ public class ObjectTalk1 : MonoBehaviour
         else if (talkOn && !wallInk1.story.canContinue)
         {
 
-            if (Input.GetKeyDown(KeyCode.Space) && playerInRange && talkOn)
+            if (Input.GetKeyDown(KeyCode.Space) && talkOn)
             {
                 Debug.Log("closingWorking");
                 wallTalk1.SetActive(false);
@@ -91,6 +91,7 @@ public class ObjectTalk1 : MonoBehaviour
         if (fifthInk.storyGoing == true)
         {
             wallTalk1.SetActive(false);
+            movement.unFreeze();
           //  Debug.Log("sdlfkj");
         }
     }

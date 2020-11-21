@@ -42,6 +42,7 @@ public class WallInk1 : MonoBehaviour
     public void refreshStory()
     {
         story = new Story(inkJSONAsset.text);
+     
     }
 
 
