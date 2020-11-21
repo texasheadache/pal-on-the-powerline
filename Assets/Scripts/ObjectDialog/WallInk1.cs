@@ -17,6 +17,7 @@ public class WallInk1 : MonoBehaviour
     public List<string> tags;
     //public GameObject panel1;
     public Text textPanel;
+    public ObjectTalk1 objectTalk1;
     
 
 

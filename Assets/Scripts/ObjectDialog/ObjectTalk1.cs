@@ -12,7 +12,7 @@ public class ObjectTalk1 : MonoBehaviour
     public bool playerInRange;
     public Movement movement;
     public GameObject wallTalk1;
-    private bool talkOn = false;
+    public bool talkOn = false;
     // private bool talkOff = false;
     public FifthInk fifthInk; 
     
@@ -26,6 +26,7 @@ public class ObjectTalk1 : MonoBehaviour
     void Update()
     {
         selfTalk();
+        hide();
     }
 
     public void selfTalk()
@@ -82,6 +83,15 @@ public class ObjectTalk1 : MonoBehaviour
         {
             playerInRange = false;
             Debug.Log("notInRange");
+        }
+    }
+
+    public void hide()
+    {
+        if (fifthInk.storyGoing == true)
+        {
+            wallTalk1.SetActive(false);
+          //  Debug.Log("sdlfkj");
         }
     }
 }

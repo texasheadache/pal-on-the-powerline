@@ -29,6 +29,7 @@ public class FifthInk : MonoBehaviour
     public PostConvoTwo postConvoTwo;
     public ThirdConvo thirdConvo;
     public PostThirdConvo postThirdConvo;
+   // public ObjectTalk1 objectTalk1; 
 
     // Start is called before the first frame update
     void Start()

@@ -259,6 +259,7 @@ MonoBehaviour:
   playerInRange: 0
   movement: {fileID: 1948399155}
   wallTalk1: {fileID: 1115254783}
+  talkOn: 0
   fifthInk: {fileID: 1487534766}
 --- !u!61 &52634543
 BoxCollider2D:
@@ -788,6 +789,7 @@ MonoBehaviour:
   playerInRange: 0
   movement: {fileID: 1948399155}
   wallTalk1: {fileID: 117549341}
+  talkOn: 0
   fifthInk: {fileID: 1487534766}
 --- !u!61 &184526282
 BoxCollider2D:
@@ -2174,6 +2176,7 @@ MonoBehaviour:
   playerInRange: 0
   movement: {fileID: 1948399155}
   wallTalk1: {fileID: 2031381182}
+  talkOn: 0
   fifthInk: {fileID: 1487534766}
 --- !u!1 &784779864
 GameObject:
@@ -3340,6 +3343,7 @@ MonoBehaviour:
   panel: {fileID: 117549341}
   tags: []
   textPanel: {fileID: 1900194992}
+  objectTalk1: {fileID: 0}
 --- !u!1 &1268506599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4229,6 +4233,7 @@ MonoBehaviour:
   panel: {fileID: 1115254783}
   tags: []
   textPanel: {fileID: 371272113}
+  objectTalk1: {fileID: 0}
 --- !u!1 &1561602353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4601,7 +4606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633650177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.11, y: 2.04, z: 0}
+  m_LocalPosition: {x: 3.79, y: 2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4930,6 +4935,7 @@ MonoBehaviour:
   panel: {fileID: 104997991}
   tags: []
   textPanel: {fileID: 2059317641}
+  objectTalk1: {fileID: 0}
 --- !u!4 &1728400355
 Transform:
   m_ObjectHideFlags: 0
@@ -5091,6 +5097,7 @@ MonoBehaviour:
   playerInRange: 0
   movement: {fileID: 1948399155}
   wallTalk1: {fileID: 104997991}
+  talkOn: 0
   fifthInk: {fileID: 1487534766}
 --- !u!61 &1798316557
 BoxCollider2D:
@@ -5538,6 +5545,7 @@ MonoBehaviour:
   panel: {fileID: 2031381182}
   tags: []
   textPanel: {fileID: 774454870}
+  objectTalk1: {fileID: 0}
 --- !u!1 &1948399154
 GameObject:
   m_ObjectHideFlags: 0
