@@ -26,11 +26,12 @@ public class ObjectTalk1 : MonoBehaviour
     void Update()
     {
         selfTalk();
-        hide();
     }
 
     public void selfTalk()
     {
+        hide();
+
         if (!talkOn)
         {
             if (Input.GetKeyDown(KeyCode.Space) && playerInRange && !talkOn && fifthInk.storyGoing == false)
@@ -88,7 +89,7 @@ public class ObjectTalk1 : MonoBehaviour
 
     public void hide()
     {
-        if (fifthInk.storyGoing == true)
+        if (fifthInk.storyGoing == true && talkOn == true)
         {
             wallTalk1.SetActive(false);
             movement.unFreeze();
