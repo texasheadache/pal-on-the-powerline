@@ -67,7 +67,7 @@ public class SecondConvo : MonoBehaviour
 
     IEnumerator secondTalk()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(25);
         ringTwoSound.Play();
         secondConvoStarts = true; 
 

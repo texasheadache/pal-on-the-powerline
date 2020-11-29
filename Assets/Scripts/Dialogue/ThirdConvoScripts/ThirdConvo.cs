@@ -58,7 +58,7 @@ public class ThirdConvo : MonoBehaviour
 
     IEnumerator triggerThirdConvo()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(20);
         ringing.Play();
         thirdConvoStarts = true; 
     }

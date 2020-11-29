@@ -36,5 +36,7 @@ public class Intro : MonoBehaviour
             start2.SetActive(false);
             Debug.Log("sdlfkjsjjj");
         }
+
+
     }
 }

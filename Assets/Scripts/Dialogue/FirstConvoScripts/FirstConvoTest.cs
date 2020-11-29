@@ -68,7 +68,7 @@ public class FirstConvoTest : MonoBehaviour
 
     IEnumerator ringOne()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         Debug.Log("lkj");
         tagAndGo = true;
         ringOneSound.Play();
