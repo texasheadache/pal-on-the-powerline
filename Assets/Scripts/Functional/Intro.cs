@@ -34,7 +34,7 @@ public class Intro : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space))
         {
             start2.SetActive(false);
-            Debug.Log("sdlfkjsjjj");
+            //Debug.Log("sdlfkjsjjj");
         }
 
 

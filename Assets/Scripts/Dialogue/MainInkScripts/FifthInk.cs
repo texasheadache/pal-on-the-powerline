@@ -17,9 +17,14 @@ public class FifthInk : MonoBehaviour
     public List<string> tags;
     public GameObject panel1;
     public Text textPanel;
+
+    public bool storyGoing;
+
+
     public AudioSource mainMusic;
     public AudioSource firstSong;
-    public bool storyGoing; 
+    public AudioSource secondConvoSong;
+    public AudioSource thirdConvoSong;
 
 
     //scripts called and related to this one within here and otherwise
@@ -187,6 +192,8 @@ public class FifthInk : MonoBehaviour
             {
                 Debug.Log(tags[2]);
             }
+
+           
         }
 
         
@@ -241,10 +248,27 @@ public class FifthInk : MonoBehaviour
             secondConvo.secondConvoStartTrigger();
         }
 
+        if (tags.Contains("secondConvoSong"))
+        {
+            Debug.Log("secConvoSong");
+            mainMusic.mute = true; 
+            secondConvoSong.mute = false;
+        }
+
+        if (tags.Contains("endSecondConvoSong"))
+        {
+            Debug.Log("EndsecConvoSong");
+            mainMusic.mute = false;
+            secondConvoSong.mute = true;
+        }
+
         if (tags.Contains("endSecondConvo"))
         {
             Debug.Log("endedSecondConversation");
             postConvoTwo.postConvoTwoBegin();
+            Debug.Log("EndsecConvoSong");
+            mainMusic.mute = false;
+            secondConvoSong.mute = true;
         }
 
         if (tags.Contains("endPostConvoTwo"))
@@ -259,10 +283,19 @@ public class FifthInk : MonoBehaviour
             thirdConvo.thirdConvoTrigger();
         }
 
+        if (tags.Contains("thirdConvoStart"))
+        {
+            Debug.Log("thirdConvoStartingggg");
+            mainMusic.mute = true;
+            thirdConvoSong.mute = false;
+        }
+
         if (tags.Contains("endThirdConvo"))
         {
             Debug.Log("endedNumberThree");
             postThirdConvo.postThirdConvoBegin();
+            mainMusic.mute = false;
+            thirdConvoSong.mute = true; 
         }
 
         if (tags.Contains("PostThirdConvoMove"))
