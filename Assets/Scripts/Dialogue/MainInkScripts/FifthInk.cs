@@ -180,6 +180,8 @@ public class FifthInk : MonoBehaviour
     public void parseTags()
     {
         tags = story.currentTags;
+
+        /*
         if (tags.Count != 0)
         {
             Debug.Log(tags[0]);
@@ -195,6 +197,7 @@ public class FifthInk : MonoBehaviour
 
            
         }
+        */
 
         
         if (tags.Contains("molly"))
@@ -294,14 +297,21 @@ public class FifthInk : MonoBehaviour
         {
             Debug.Log("endedNumberThree");
             postThirdConvo.postThirdConvoBegin();
-            mainMusic.mute = false;
-            thirdConvoSong.mute = true; 
+           // mainMusic.mute = false;
+           // thirdConvoSong.mute = true; 
         }
 
         if (tags.Contains("PostThirdConvoMove"))
         {
             Debug.Log("movinAgain");
             postThirdConvo.movingAgain();
+        }
+
+        if (tags.Contains("postThirdConvoStart"))
+        {
+            Debug.Log("postStartmusic");
+            mainMusic.mute = false;
+            thirdConvoSong.mute = true;
         }
 
     }
