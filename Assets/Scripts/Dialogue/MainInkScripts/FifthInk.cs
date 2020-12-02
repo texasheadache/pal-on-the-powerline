@@ -205,7 +205,7 @@ public class FifthInk : MonoBehaviour
         {
            Debug.Log("mollyChangeColors!");
            textPrefab.GetComponent<Text>().material.color = Color.black;
-           panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400f, -363f, 0f);
+           panel1.transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector3(-400f, -350f, 0f);
         }
 
         if (tags.Contains("phone"))
