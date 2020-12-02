@@ -34,6 +34,7 @@ public class FifthInk : MonoBehaviour
     public PostConvoTwo postConvoTwo;
     public ThirdConvo thirdConvo;
     public PostThirdConvo postThirdConvo;
+    public PostPostThird postPostThird;
    // public ObjectTalk1 objectTalk1; 
 
     // Start is called before the first frame update
@@ -312,6 +313,18 @@ public class FifthInk : MonoBehaviour
             Debug.Log("postStartmusic");
             mainMusic.mute = false;
             thirdConvoSong.mute = true;
+        }
+
+        if (tags.Contains("endPostThirdConvo"))
+        {
+            Debug.Log("endjPostjThirjdConvjo");
+            postPostThird.postPostThirdConvoBegin();
+        }
+
+        if (tags.Contains("endPostPostThird"))
+        {
+            Debug.Log("StopPostPostThird");
+            postPostThird.secondRinging();
         }
 
     }
