@@ -55,11 +55,12 @@ public class WallInk1 : MonoBehaviour
     {
 
         //clear the ui
-
+        
         if (story.currentChoices.Count < 1)
         {
             clearUI();
         }
+        
 
 
         if (story.canContinue)
