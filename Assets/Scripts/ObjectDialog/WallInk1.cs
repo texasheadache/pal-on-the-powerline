@@ -55,18 +55,18 @@ public class WallInk1 : MonoBehaviour
     {
 
         //clear the ui
-        
+
+        /*
         if (story.currentChoices.Count < 1)
         {
             clearUI();
         }
-        
-
+        */
 
         if (story.canContinue)
         {
 
-            clearUI();
+          //  clearUI();
 
             //  Text storyText = Instantiate(textPrefab) as Text;
 
@@ -82,18 +82,30 @@ public class WallInk1 : MonoBehaviour
 
             foreach (Choice choice in story.currentChoices)
             {
+
+              //  Button choiceButton = btn;
+                
                 Button choiceButton = Instantiate(buttonPrefab) as Button;
                 choiceButton.transform.SetParent(this.transform, false);
+                
 
+              //  Text choiceText = btn.GetComponentInChildren<Text>();
+               // choiceText.text = choice.text; 
+
+                
                 //gets the text from the button prefab
                 Text choiceText = choiceButton.GetComponentInChildren<Text>();
                 choiceText.text = choice.text;
+                
 
+                
                 //set listener
                 choiceButton.onClick.AddListener(delegate
                 {
                     onClickChoiceButton(choice);
                 });
+
+                
             }
         }
 

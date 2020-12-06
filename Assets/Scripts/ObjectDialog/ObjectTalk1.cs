@@ -40,6 +40,7 @@ public class ObjectTalk1 : MonoBehaviour
                 wallTalk1.SetActive(true);
                 talkOn = true;
                 movement.freeze();
+                wallInk1.story.ChoosePathString("knot0");
                 selfTalking();
             }
         }
@@ -59,7 +60,8 @@ public class ObjectTalk1 : MonoBehaviour
                 wallTalk1.SetActive(false);
                 talkOn = false;
                 movement.unFreeze();
-                wallInk1.refreshStory();
+               // wallInk1.refreshStory();
+              //  wallInk1.story.Continue();
             }
         }
     }
