@@ -5,7 +5,7 @@
 ->DONE
 
 ===knotone===
-{&->knot1 | ->knot2 | ->knot3}
+{&->knot1 | ->knot2 | ->knot3 | ->knot4}
 
 
 ===knot1===
@@ -15,14 +15,21 @@ I hate being on winter break.
 ->->
 
 ===knot2===
-I wish I lived in the desert
-where the nights are so quiet.
+I wanna live in a rainy desert.
 ->->
 
 ===knot3===
-I bet 
-halfway across the world
-or even right next door
-someone's also looking out their window
-waiting for the weather to stop. 
+Can you spot Saturn's rings with your own two eyes? 
 ->->
+
+===knot4===
+I'd like to live in a space station. 
+like
+a really cozy space station. 
+With a southwestern themed bar. 
+->->
+
+===knot5===
+
+->->
+
