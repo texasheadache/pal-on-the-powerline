@@ -68,4 +68,5 @@ public class ThirdConvo : MonoBehaviour
         fifthInk.story.ChoosePathString("ThirdConvo");
     }
 
+
 }

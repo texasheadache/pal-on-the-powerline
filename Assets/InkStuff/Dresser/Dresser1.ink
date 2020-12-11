@@ -9,23 +9,23 @@
 
 
 ===knot1===
-My school make us read the most obnoxious shit. 
+My school makes us read the most obnoxious shit. 
 ->->
 
 ===knot2===
-War and Peace? 
-More like
-a chore to read. #rimshot
-->->
-
-===knot3===
 Huckleberry Finn?
 More like 
 Fuckleberry Shit. #rimshot
 ->->
 
+===knot3===
+Madame Bovary. 
+I don't care about this french bullshit. 
+->->
+
 ===knot4===
-Pride and Prejudice? 
-More like
-'why did i ever read this'. #rimshot
+I think Mr. McCardle hates me. 
+But he would never admit it. 
+He just thinks i'm a stoner idiot. 
+Fucker. 
 ->->

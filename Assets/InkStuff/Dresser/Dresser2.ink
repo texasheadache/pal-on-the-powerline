@@ -14,12 +14,15 @@ I think they make me look more 'adult'.
 ->->
 
 ===knot2===
-Am I being overdramatic? 
+I don't even really like flowers. 
+I just like havin' 'em around. 
 ->->
 
 ===knot3===
-I feel like i'm beating a dead horse
-with a phonebook. 
+He loves me.
+He loves me not. 
+He loves me. 
+He loves me not. 
 ->->
 
 ===knot4===

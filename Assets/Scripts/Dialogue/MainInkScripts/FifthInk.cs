@@ -328,8 +328,6 @@ public class FifthInk : MonoBehaviour
             postPostThird.secondRinging();
         }
 
-
-
     }
 
 
