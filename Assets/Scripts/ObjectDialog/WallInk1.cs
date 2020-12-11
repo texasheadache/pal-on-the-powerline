@@ -11,14 +11,14 @@ public class WallInk1 : MonoBehaviour
     public Story story;
     public Button buttonPrefab;
     public GameObject panel;
-   // public Text textPrefab;
+    // public Text textPrefab;
     private Text storyText;
     // public GameObject firstPanel;
     public List<string> tags;
     //public GameObject panel1;
     public Text textPanel;
     public ObjectTalk1 objectTalk1;
-    
+
 
 
 
@@ -42,7 +42,7 @@ public class WallInk1 : MonoBehaviour
     public void refreshStory()
     {
         story = new Story(inkJSONAsset.text);
-     
+
     }
 
 
@@ -66,7 +66,7 @@ public class WallInk1 : MonoBehaviour
         if (story.canContinue)
         {
 
-          //  clearUI();
+            //  clearUI();
 
             //  Text storyText = Instantiate(textPrefab) as Text;
 
@@ -83,29 +83,29 @@ public class WallInk1 : MonoBehaviour
             foreach (Choice choice in story.currentChoices)
             {
 
-              //  Button choiceButton = btn;
-                
+                //  Button choiceButton = btn;
+
                 Button choiceButton = Instantiate(buttonPrefab) as Button;
                 choiceButton.transform.SetParent(this.transform, false);
-                
 
-              //  Text choiceText = btn.GetComponentInChildren<Text>();
-               // choiceText.text = choice.text; 
 
-                
+                //  Text choiceText = btn.GetComponentInChildren<Text>();
+                // choiceText.text = choice.text; 
+
+
                 //gets the text from the button prefab
                 Text choiceText = choiceButton.GetComponentInChildren<Text>();
                 choiceText.text = choice.text;
-                
 
-                
+
+
                 //set listener
                 choiceButton.onClick.AddListener(delegate
                 {
                     onClickChoiceButton(choice);
                 });
 
-                
+
             }
         }
 
@@ -178,18 +178,12 @@ public class WallInk1 : MonoBehaviour
     public void parseTags()
     {
         tags = story.currentTags;
-        if (tags.Count != 0)
-        {
-            Debug.Log(tags[0]);
 
-            if (tags.Count > 1)
-            {
-                Debug.Log(tags[1]);
-            }
-            if (tags.Count > 2)
-            {
-                Debug.Log(tags[2]);
-            }
+
+        if (tags.Contains("rimshot"))
+        {
+            Debug.Log("laugh");
+            objectTalk1.playRimshot();
         }
     }
 }

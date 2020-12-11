@@ -5,7 +5,7 @@
 ->DONE
 
 ===knotone===
-{&->knot1 | ->knot2 | ->knot3}
+{&->knot1 | ->knot2 | ->knot3 | ->knot4}
 
 
 ===knot1===

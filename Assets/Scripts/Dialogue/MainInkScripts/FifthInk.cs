@@ -35,6 +35,7 @@ public class FifthInk : MonoBehaviour
     public ThirdConvo thirdConvo;
     public PostThirdConvo postThirdConvo;
     public PostPostThird postPostThird;
+    public ObjectTalk1 objectTalk1;
    // public ObjectTalk1 objectTalk1; 
 
     // Start is called before the first frame update
@@ -326,6 +327,8 @@ public class FifthInk : MonoBehaviour
             Debug.Log("StopPostPostThird");
             postPostThird.secondRinging();
         }
+
+
 
     }
 

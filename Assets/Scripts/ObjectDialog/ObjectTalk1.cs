@@ -14,7 +14,8 @@ public class ObjectTalk1 : MonoBehaviour
     public GameObject wallTalk1;
     public bool talkOn = false;
     // private bool talkOff = false;
-    public FifthInk fifthInk; 
+    public FifthInk fifthInk;
+    public AudioSource rimshot1; 
     
     // Start is called before the first frame update
     void Start()
@@ -98,4 +99,10 @@ public class ObjectTalk1 : MonoBehaviour
           //  Debug.Log("sdlfkj");
         }
     }
+
+    public void playRimshot()
+    {
+        rimshot1.Play();
+    }
+
 }
