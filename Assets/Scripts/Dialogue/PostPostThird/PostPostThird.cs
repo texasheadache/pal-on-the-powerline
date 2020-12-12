@@ -52,7 +52,7 @@ public class PostPostThird : MonoBehaviour
 
     IEnumerator postPostThirdTrigger()
     {
-        yield return new WaitForSeconds(9);
+        yield return new WaitForSeconds(7);
        // postPostConvoThreeStarts = true;
         dial.Play();
         postPostConvoThreeStarts = true; 
