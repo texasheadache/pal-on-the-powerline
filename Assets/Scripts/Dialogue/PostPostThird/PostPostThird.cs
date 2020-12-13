@@ -52,7 +52,7 @@ public class PostPostThird : MonoBehaviour
 
     IEnumerator postPostThirdTrigger()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(4);
        // postPostConvoThreeStarts = true;
         dial.Play();
         postPostConvoThreeStarts = true; 
@@ -73,10 +73,10 @@ public class PostPostThird : MonoBehaviour
     IEnumerator secondingRinging()
     {
         Debug.Log("secondingggRinginggg");
+        dial.Stop();
         secondRing.Play();
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(10);
         secondRing.Stop();
         thirdRing.Play();
-        
     }
 }
