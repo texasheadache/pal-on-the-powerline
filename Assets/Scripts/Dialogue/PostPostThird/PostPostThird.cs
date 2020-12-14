@@ -18,6 +18,8 @@ public class PostPostThird : MonoBehaviour
     public AudioSource secondRing;
     public AudioSource thirdRing;
 
+    public GameObject canvas1; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,7 @@ public class PostPostThird : MonoBehaviour
         secondRing.Play();
         yield return new WaitForSeconds(10);
         secondRing.Stop();
-        thirdRing.Play();
+        canvas1.SetActive(true);
+       // thirdRing.Play();
     }
 }
