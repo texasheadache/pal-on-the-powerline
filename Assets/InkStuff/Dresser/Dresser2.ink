@@ -5,7 +5,7 @@
 ->DONE
 
 ===knotone===
-{&->knot1 | ->knot2 | ->knot3}
+{&->knot1 | ->knot2 | ->knot3| ->knot4}
 
 
 ===knot1===
@@ -14,17 +14,19 @@ I think they make me look more 'adult'.
 ->->
 
 ===knot2===
-I don't even really like flowers. 
-I just like havin' 'em around. 
-->->
-
-===knot3===
 He loves me.
 He loves me not. 
 He loves me. 
-He loves me not. 
+He loves me not.
+->->
+
+===knot3===
+It's okay to buy yourself flowers. 
 ->->
 
 ===knot4===
-
+I guess you could say
+that I have an eye for aesthetics. 
+I'm cool,
+right?
 ->->

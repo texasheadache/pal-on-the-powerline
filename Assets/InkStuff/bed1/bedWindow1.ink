@@ -19,7 +19,10 @@ I wanna live in a rainy desert.
 ->->
 
 ===knot3===
-Can you spot Saturn's rings with your own two eyes? 
+Every summer I wish it was winter. 
+Every winter I wish it was summer. 
+The weather's only really nice 
+for the first few days of the season.
 ->->
 
 ===knot4===
@@ -30,6 +33,10 @@ With a southwestern themed bar.
 ->->
 
 ===knot5===
-
+I don't have a favorite season. 
+They're all fine
+when I feel okay 
+and then they're awful
+when I feel awful. 
 ->->
 
